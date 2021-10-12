@@ -2628,6 +2628,410 @@
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
         </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IUserCenterService" enabled="true"/>
+        <hashTree>
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-getContactAddressByUserId" enabled="false">
+            <stringProp name="TestPlan.comments">1.获取用户地址 2.uc_contact_address表中的user_id</stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD">getNewContactAddressByUserId</stringProp>
+            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023329</stringProp>
+          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-getUserDefaultAddress" enabled="false">
+            <stringProp name="TestPlan.comments">1.获取用户默认地址   2.uc_contact_address表中的user_id</stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD">getUserDefaultAddress</stringProp>
+            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023329</stringProp>
+          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-getNewContactAddressByUserId" enabled="false">
+            <stringProp name="TestPlan.comments">1.新版获取常用地址   2.uc_contact_address表中的user_id</stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD">getNewContactAddressByUserId</stringProp>
+            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023329</stringProp>
+          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-getDefaultContactAddress" enabled="false">
+            <stringProp name="TestPlan.comments">1.获取用户默认地址   2.uc_contact_address表中的user_id</stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD">getDefaultContactAddress</stringProp>
+            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023329</stringProp>
+          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-saveContactAddress" enabled="false">
+            <stringProp name="TestPlan.comments">保存联系人和地址</stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD">saveContactAddress</stringProp>
+            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.micro.user.model.ContactAddress</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;userId&quot;:5023264,&quot;contacter&quot;:&quot;top&quot;,&quot;contacterMobile&quot;:&quot;137${__RandomString(8,0123456789,)}&quot;,&quot;districtId&quot;:null,&quot;placeId&quot;:10201,&quot;provinces&quot;:&quot;上海市&quot;,&quot;street&quot;:null,&quot;address&quot;:&quot;杨浦区&quot;,&quot;addressName&quot;:&quot;上海市杨浦区政府&quot;,&quot;detailAddress&quot;:&quot;惠民路800号&quot;,&quot;lonGd&quot;:&quot;121.52609&quot;,&quot;latGd&quot;:&quot;31.25956&quot;,&quot;lonBd&quot;:&quot;121.53260951140229&quot;,&quot;latBd&quot;:&quot;31.26548599593991&quot;,&quot;isDefault&quot;:1,&quot;createdTime&quot;:${__time(,)},&quot;updatedTime&quot;:${__time(,)},&quot;deleted&quot;:0}</stringProp>
+          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-countUserContactAddress" enabled="false">
+            <stringProp name="TestPlan.comments"> 1.查询用户地址总数 2.uc_contact_address表中的user_id</stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD">countUserContactAddress</stringProp>
+            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023264</stringProp>
+          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-updateContactAddress" enabled="false">
+            <stringProp name="TestPlan.comments"> 1.更新地址 2.uc_contact_address表中的user_id</stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD">updateContactAddress</stringProp>
+            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
+            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.micro.user.model.ContactAddress</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;id&quot;:863,&quot;userId&quot;:5023264,&quot;contacter&quot;:&quot;top&quot;,&quot;contacterMobile&quot;:&quot;137${__RandomString(8,0123456789,)}&quot;,&quot;districtId&quot;:null,&quot;placeId&quot;:10201,&quot;provinces&quot;:&quot;上海市&quot;,&quot;street&quot;:null,&quot;address&quot;:&quot;杨浦区&quot;,&quot;addressName&quot;:&quot;上海市杨浦区政府12345&quot;,&quot;detailAddress&quot;:&quot;惠民路800号&quot;,&quot;lonGd&quot;:&quot;121.52609&quot;,&quot;latGd&quot;:&quot;31.25956&quot;,&quot;lonBd&quot;:&quot;121.53260951140229&quot;,&quot;latBd&quot;:&quot;31.26548599593991&quot;,&quot;isDefault&quot;:1,&quot;createdTime&quot;:${__time(,)},&quot;updatedTime&quot;:${__time(,)},&quot;deleted&quot;:0}</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">boolean</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">false</stringProp>
+          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-getContactAddressById" enabled="false">
+            <stringProp name="TestPlan.comments"> 1.获得地址明细 2.uc_contact_address表中的user_id</stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD">getContactAddressById</stringProp>
+            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
+            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">863</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Boolean</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">true</stringProp>
+          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-getContactAddressByUserIdAndPlaceId" enabled="false">
+            <stringProp name="TestPlan.comments"> 1.根据用户联系地址 2.uc_contact_address表中的user_id</stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD">getContactAddressByUserIdAndPlaceId</stringProp>
+            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
+            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023264</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Integer</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">10201</stringProp>
+          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-getContactAddressByUserIdAndId" enabled="false">
+            <stringProp name="TestPlan.comments"> 1.根据用户ID和主键ID获取联系地址 2.uc_contact_address表中的id</stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD">getContactAddressByUserIdAndId</stringProp>
+            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
+            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023264</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Long</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">863</stringProp>
+          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="返回null的所有方法" enabled="true"/>
+          <hashTree>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-deleteContactAddress" enabled="false">
+              <stringProp name="TestPlan.comments"> 1.批量删除 2.uc_contact_address表中的user_id</stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">deleteContactAddress</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.util.List</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">[&quot;859&quot;,&quot;858&quot;,&quot;857&quot;,&quot;856&quot;,&quot;860&quot;]</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Long</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">5023264</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-getContactAddressByUserIdAndId" enabled="true">
+              <stringProp name="TestPlan.comments"> 1.根据用户ID和地址ID以及地图类型查询地址详情 2.uc_contact_address表中的id</stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IUserCenterService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">getContactAddressDtoByMapType</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">3</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023264</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Long</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">863</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">short</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">${__Random(1,2,)}</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
       </hashTree>
       <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="mockjs" enabled="false"/>
       <hashTree>
