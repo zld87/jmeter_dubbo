@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+      <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+        <boolProp name="LoopController.continue_forever">false</boolProp>
+        <stringProp name="LoopController.loops">1</stringProp>
+      </elementProp>
+      <stringProp name="ThreadGroup.num_threads">1</stringProp>
+      <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+      <boolProp name="ThreadGroup.scheduler">false</boolProp>
+      <stringProp name="ThreadGroup.duration"></stringProp>
+      <stringProp name="ThreadGroup.delay"></stringProp>
+      <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+    </ThreadGroup>
+    <hashTree>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="用户基础数据" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="telephone" elementType="Argument">
+            <stringProp name="Argument.name">telephone</stringProp>
+            <stringProp name="Argument.value">13916843741</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="数据库获取短信" enabled="true">
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="checkQuery">select 1</stringProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="connectionProperties"></stringProp>
+        <stringProp name="dataSource">lcbtest</stringProp>
+        <stringProp name="dbUrl">jdbc:mysql://mysql.lcbtest.cn:3306/lcb_sms_db?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;?allowMultiQueries=true</stringProp>
+        <stringProp name="driver">com.mysql.jdbc.Driver</stringProp>
+        <stringProp name="initQuery"></stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <stringProp name="password">@,ue&quot;L&amp;5WylnK$GRb&amp;ms</stringProp>
+        <stringProp name="poolMax">0</stringProp>
+        <boolProp name="preinit">false</boolProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <stringProp name="username">lcb_dev</stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="m.lechebang.cn" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">m.lechebang.cn</stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol">https</stringProp>
+        <stringProp name="HTTPSampler.contentEncoding">utf8</stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">false</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="true"/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="发送登陆短信" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="mobile" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">13916843740</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">mobile</stringProp>
+              </elementProp>
+              <elementProp name="appCode" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">101</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">appCode</stringProp>
+              </elementProp>
+              <elementProp name="lcb_client_id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">82ffedfe-5d69-48fa-958e-94c00c4471ff</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">lcb_client_id</stringProp>
+              </elementProp>
+              <elementProp name="lcb_request_id" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">ba6e2286-2adb-47a2-8a1d-4d3c4c99f488</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">lcb_request_id</stringProp>
+              </elementProp>
+              <elementProp name="lcb_h5_v" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">7.11.0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">lcb_h5_v</stringProp>
+              </elementProp>
+              <elementProp name="lcb_h5_mock" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">0</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">lcb_h5_mock</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">gateway/user/sendSecurityLoginSms</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="发送登陆短信" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;mobile&quot;: &quot;${telephone}&quot;,&#xd;
+	&quot;appCode&quot;: 101,&#xd;
+	&quot;lcb_client_id&quot;: &quot;82ffedfe-5d69-48fa-958e-94c00c4471ff&quot;,&#xd;
+	&quot;lcb_request_id&quot;: &quot;ba6e2286-2adb-47a2-8a1d-4d3c4c99f488&quot;,&#xd;
+	&quot;lcb_h5_v&quot;: &quot;7.11.0&quot;,&#xd;
+	&quot;lcb_h5_mock&quot;: 0&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">gateway/user/sendSecurityLoginSms</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="获取数据库验证码" enabled="true">
+          <stringProp name="dataSource">lcbtest</stringProp>
+          <stringProp name="query">select id,mobiles,content from lcb_sms_db.sms_log 
+where mobiles =&quot;${telephone}&quot; order by id desc limit 5</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="resultSetHandler">Store as String</stringProp>
+          <stringProp name="resultSetMaxRows"></stringProp>
+          <stringProp name="resultVariable"></stringProp>
+          <stringProp name="variableNames">,,vcode</stringProp>
+        </JDBCSampler>
+        <hashTree>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="false">
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">${vcode_1}</stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script">String old_vcode = vars.getObject(&quot;vcode_1&quot;);
+String new_vcode = old_vcode.substring(0,old_vcode.length()-12);
+vars.putObject(&quot;new_vcode&quot;,new_vcode);
+</stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">String old_vcode = vars.getObject(&quot;vcode_1&quot;);
+String new_vcode = old_vcode.substring(0,old_vcode.length()-12);
+vars.putObject(&quot;new_vcode&quot;,new_vcode);
+log.info(&quot;1111111111111&quot;+prev.getResponseDataAsString())
+
+</stringProp>
+            <stringProp name="scriptLanguage">beanshell</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="登陆" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+	&quot;mobile&quot;: &quot;${telephone}&quot;,&#xd;
+	&quot;code&quot;: &quot;${new_vcode}&quot;,&#xd;
+	&quot;source&quot;: {&#xd;
+		&quot;placeId&quot;: 10201&#xd;
+	},&#xd;
+	&quot;appCode&quot;: 101,&#xd;
+	&quot;lcb_client_id&quot;: &quot;82ffedfe-5d69-48fa-958e-94c00c4471ff&quot;,&#xd;
+	&quot;lcb_request_id&quot;: &quot;bbcb0990-0d87-461f-ae6a-45abb282f6c9&quot;,&#xd;
+	&quot;lcb_h5_v&quot;: &quot;7.11.0&quot;,&#xd;
+	&quot;lcb_h5_mock&quot;: 0&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf8</stringProp>
+          <stringProp name="HTTPSampler.path">/gateway/user/smsLogin</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="token" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.result.token</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="修改个人信息" enabled="true">
+        <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="" elementType="HTTPArgument">
+              <boolProp name="HTTPArgument.always_encode">false</boolProp>
+              <stringProp name="Argument.value">{&#xd;
+	&quot;nickName&quot;: &quot;${__RandomString(8,abcde,zld)}&quot;,&#xd;
+	&quot;appCode&quot;: 101,&#xd;
+	&quot;lcb_client_id&quot;: &quot;82ffedfe-5d69-48fa-958e-94c00c4471ff&quot;,&#xd;
+	&quot;lcb_request_id&quot;: &quot;e558edb1-aba0-4319-8309-c099d03b6df1&quot;,&#xd;
+	&quot;lcb_h5_v&quot;: &quot;7.11.0&quot;,&#xd;
+}</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain"></stringProp>
+        <stringProp name="HTTPSampler.port"></stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path">gateway/user/saveUserInfo</stringProp>
+        <stringProp name="HTTPSampler.method">POST</stringProp>
+        <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+        <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+        <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+        <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+        <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </HTTPSamplerProxy>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <JMeter.plugins.functional.samplers.websocket.WebSocketSampler guiclass="JMeter.plugins.functional.samplers.websocket.WebSocketSamplerGui" testclass="JMeter.plugins.functional.samplers.websocket.WebSocketSampler" testname="WebSocket Sampler" enabled="false">
+        <stringProp name="serverAddress"></stringProp>
+        <stringProp name="serverPort">80</stringProp>
+        <stringProp name="implementation">RFC6455 (v13)</stringProp>
+        <stringProp name="protocol">ws</stringProp>
+        <stringProp name="contextPath"></stringProp>
+        <stringProp name="contentEncoding">UTF-8</stringProp>
+        <stringProp name="requestPayload"></stringProp>
+        <stringProp name="connectionTimeout">5000</stringProp>
+        <stringProp name="responseTimeout">20000</stringProp>
+        <boolProp name="ignoreSslErrors">false</boolProp>
+        <boolProp name="streamingConnection">false</boolProp>
+        <stringProp name="connectionId"></stringProp>
+        <stringProp name="responsePattern"></stringProp>
+        <stringProp name="closeConncectionPattern"></stringProp>
+        <stringProp name="proxyAddress"></stringProp>
+        <stringProp name="proxyPassword"></stringProp>
+        <stringProp name="proxyPort"></stringProp>
+        <stringProp name="proxyUsername"></stringProp>
+        <stringProp name="messageBacklog">3</stringProp>
+        <elementProp name="queryStringParameters" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+      </JMeter.plugins.functional.samplers.websocket.WebSocketSampler>
+      <hashTree/>
+      <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="Dubbo Sample" enabled="false">
+        <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL">zookeeper</stringProp>
+        <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+        <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+        <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+        <stringProp name="FIELD_DUBBO_TIMEOUT">1000</stringProp>
+        <stringProp name="FIELD_DUBBO_VERSION">1.0</stringProp>
+        <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+        <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+        <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+        <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+        <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+        <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+        <stringProp name="FIELD_DUBBO_INTERFACE"></stringProp>
+        <stringProp name="FIELD_DUBBO_METHOD"></stringProp>
+        <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">0</intProp>
+      </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

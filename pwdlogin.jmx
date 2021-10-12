@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.2.1">
+  <hashTree>
+    <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragment" enabled="true"/>
+    <hashTree>
+      <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserService-pwdLogin" enabled="true">
+        <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL">zookeeper</stringProp>
+        <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+        <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+        <stringProp name="FIELD_DUBBO_ADDRESS">soasystem2.lcbint.cn:9181</stringProp>
+        <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
+        <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+        <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+        <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+        <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+        <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+        <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+        <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+        <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.user.v2.service.IUserService</stringProp>
+        <stringProp name="FIELD_DUBBO_METHOD">pwdLogin</stringProp>
+        <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">4</intProp>
+        <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.String</stringProp>
+        <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">${mobile}</stringProp>
+        <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.String</stringProp>
+        <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">${pwd}</stringProp>
+        <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+        <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+        <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+        <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+        <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+        <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+        <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+        <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+        <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+        <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+        <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+        <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">java.lang.String</stringProp>
+        <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">${registerIp}</stringProp>
+        <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
+        <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
+        <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
+        <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+      </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+      <hashTree>
+        <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="获取token" enabled="true">
+          <stringProp name="JSONPostProcessor.referenceNames">token</stringProp>
+          <stringProp name="JSONPostProcessor.jsonPathExprs">$.token</stringProp>
+          <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+        </JSONPostProcessor>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
