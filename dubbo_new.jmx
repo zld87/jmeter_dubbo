@@ -26,53 +26,494 @@
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-          <collectionProp name="Arguments.arguments">
-            <elementProp name="userid" elementType="Argument">
-              <stringProp name="Argument.name">userid</stringProp>
-              <stringProp name="Argument.value">1481</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="pwd" elementType="Argument">
-              <stringProp name="Argument.name">pwd</stringProp>
-              <stringProp name="Argument.value">q12345678</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="tags" elementType="Argument">
-              <stringProp name="Argument.name">tags</stringProp>
-              <stringProp name="Argument.value">${__Random(1,2,)}</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-          </collectionProp>
-        </Arguments>
-        <hashTree/>
-        <ConfigTestElement guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboDefaultConfigGui" testclass="ConfigTestElement" testname="Dubbo Config" enabled="true">
-          <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-          <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-          <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-          <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-          <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-          <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-          <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
-          <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL">zookeeper</stringProp>
-          <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-          <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-          <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-          <stringProp name="FIELD_DUBBO_ADDRESS">soasystem2.lcbint.cn:9181</stringProp>
-          <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
-          <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-          <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
-          <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-          <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-          <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-          <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
-          <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-          <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-          <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-        </ConfigTestElement>
-        <hashTree/>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="soa-user" enabled="true"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="mockjs" enabled="false"/>
         <hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">1</stringProp>
+          </LoopController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="mock test" enabled="false">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">192.168.3.49</stringProp>
+              <stringProp name="HTTPSampler.port">8081</stringProp>
+              <stringProp name="HTTPSampler.protocol">http</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">mock/100004/gateway/user/sendSecurityLoginSms</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree/>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="mock test" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="token" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.value">34343434</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                    <stringProp name="Argument.name">token</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain">mock.lechebang.cn</stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">mock/6142a13d4012ce28e85aa09e/example_copy/testreq</stringProp>
+              <stringProp name="HTTPSampler.method">POST</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="soa-sms" enabled="false"/>
+        <hashTree>
+          <ConfigTestElement guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboDefaultConfigGui" testclass="ConfigTestElement" testname="soasystem2.lcbint.cn:9181" enabled="true">
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL">zookeeper</stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS">soasystem2.lcbint.cn:9181</stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES"></stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+          </ConfigTestElement>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IUserMsmCodeService" enabled="true"/>
+          <hashTree>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserMsmCodeService-sendCodeSms" enabled="true">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT">6000</stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.sms.v2.service.ISmsService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">sendMessage</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.sms.v2.contract.req.UserMsmSenderContract</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;mobile&quot;:&quot;13916843740&quot;,&quot;msgType&quot;:1,&quot;key&quot;:abdzld,&quot;time&quot;:20211011,&quot;templateName&quot;:&quot;乐车邦app登录&quot;,&quot;ip&quot;:&quot;192.168.3.3&quot;,&quot;ua&quot;:&quot;dfsf&quot;,&quot;userId&quot;:16505193,&quot;appCode&quot;:&quot;101&quot;,&quot;security&quot;:false,&quot;pass&quot;:false,&quot;smsTemplateId&quot;:1}</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="ISmsService" enabled="true"/>
+          <hashTree>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="ISmsService-sendMessage (test)" enabled="false">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT">6000</stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.sms.v2.service.ISmsService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">sendMessage</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.sms.v2.contract.req.Message</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;channelId&quot;:4,&quot;channelType&quot;:1,&quot;priority&quot;:2,&quot;templateId&quot;:2,&quot;mobiles&quot;:&quot;13916843740&quot;,&quot;sendTime&quot;:&quot;${__time(yyyy-MM-dd HH:mm:ss,)}&quot;,&quot;content&quot;:&quot;testtesttest&quot;,&quot;subPort&quot;:&quot;0&quot;,&quot;storeId&quot;:0,&quot;platformId&quot;:1,&quot;variableSmsType&quot;:2}</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="ISmsService-sendBizTemplateMessage （error）" enabled="false">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT">6000</stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.sms.v2.service.ISmsService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">sendBizTemplateMessage</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">2</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">com.lcb.soa.sms.v2.contract.req.SmsSendBizTemplateRequest</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">{&quot;mobiles&quot;:&quot;13916843740&quot;,&quot;priority&quot;:4,&quot;channelId&quot;:3,&quot;platformId&quot;:1,&quot;sendTime&quot;:&quot;${__timeShift(yyyy-MM-dd HH:mm:ss,,P1d,,)}&quot;}</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="soa-store" enabled="false"/>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="userid" elementType="Argument">
+                <stringProp name="Argument.name">userid</stringProp>
+                <stringProp name="Argument.value">1481</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="pwd" elementType="Argument">
+                <stringProp name="Argument.name">pwd</stringProp>
+                <stringProp name="Argument.value">q12345678</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="tags" elementType="Argument">
+                <stringProp name="Argument.name">tags</stringProp>
+                <stringProp name="Argument.value">${__Random(1,2,)}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <ConfigTestElement guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboDefaultConfigGui" testclass="ConfigTestElement" testname="soasystem2.lcbint.cn:9181" enabled="true">
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL">zookeeper</stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS">soasystem2.lcbint.cn:9181</stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES"></stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+          </ConfigTestElement>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IInstitutionService" enabled="true"/>
+          <hashTree>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IInstitutionService-queryStoresByTags" enabled="true">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IInstitutionService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">queryStoresByTags</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.util.List</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">[${tags}]</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="storeId" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">storeId</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$[*].id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="打印日志" enabled="true">
+                <stringProp name="filename"></stringProp>
+                <stringProp name="parameters"></stringProp>
+                <boolProp name="resetInterpreter">false</boolProp>
+                <stringProp name="script">log.info(&quot;11111111111111&quot;+&quot;2222zld&quot;)</stringProp>
+              </BeanShellPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IInstitutionService-queryStoresInSameGroup (error)" enabled="true">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IInstitutionService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">queryStoresInSameGroup</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">${storeId}</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.util.List</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">[${tags}]</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IJdShopToreTireService" enabled="false"/>
+          <hashTree>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IJdShopToreTireService-getShopToreTireByLcbStoreId" enabled="true">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IJdShopToreTireService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">getShopToreTireByLcbStoreId</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Integer</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">${lcbstoreId}</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.util.List</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">[&quot;${tags}&quot;]</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="jdStoreId" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">jdStoreId</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.jdStoreId</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="id" enabled="true">
+                <stringProp name="JSONPostProcessor.referenceNames">id</stringProp>
+                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
+                <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
+              </JSONPostProcessor>
+              <hashTree/>
+            </hashTree>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IJdShopToreTireService-getShopToreTireById" enabled="true">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IJdShopToreTireService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">getShopToreTireById</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">${id}</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.util.List</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">[&quot;${tags}&quot;]</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IJdShopToreTireService-getShopToreTireByJdStoreId" enabled="true">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IJdShopToreTireService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">getShopToreTireByJdStoreId</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">${jdStoreId}</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.util.List</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">[&quot;${tags}&quot;]</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IJdShopToreTireService-getShopTireDetailResult" enabled="true">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IJdShopToreTireService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">getShopTireDetailResult</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">${id}</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.util.List</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">[&quot;${tags}&quot;]</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="soa-user" enabled="false"/>
+        <hashTree>
+          <ConfigTestElement guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboDefaultConfigGui" testclass="ConfigTestElement" testname="soasystem2.lcbint.cn:9181" enabled="true">
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL">zookeeper</stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS">soasystem2.lcbint.cn:9181</stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES"></stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+          </ConfigTestElement>
+          <hashTree/>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IUserService" enabled="true"/>
           <hashTree>
             <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserService-register（admin）" enabled="true">
@@ -223,15 +664,15 @@
               <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
             </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
             <hashTree/>
-            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="IUserService-pwdLogin" enabled="true">
+            <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="IUserService-pwdLogin" enabled="false">
               <stringProp name="IncludeController.includepath">/Users/zhouliudong/jmetergit/jmeter_dubbo/pwdlogin.jmx</stringProp>
             </IncludeController>
             <hashTree/>
             <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserService-pwdLogin" enabled="false">
-              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL">zookeeper</stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
               <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
               <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_ADDRESS">soasystem.lcbint.cn:9181</stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
               <stringProp name="FIELD_DUBBO_TIMEOUT">5000</stringProp>
               <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
               <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
@@ -423,373 +864,9 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="soa-sms" enabled="false"/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="soa-micro-user" enabled="true"/>
         <hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IUserMsmCodeService" enabled="true"/>
-          <hashTree>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserMsmCodeService-sendCodeSms" enabled="true">
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_TIMEOUT">6000</stringProp>
-              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
-              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.sms.v2.service.ISmsService</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD">sendMessage</stringProp>
-              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
-              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.sms.v2.contract.req.UserMsmSenderContract</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;mobile&quot;:&quot;13916843740&quot;,&quot;msgType&quot;:1,&quot;key&quot;:abdzld,&quot;time&quot;:20211011,&quot;templateName&quot;:&quot;乐车邦app登录&quot;,&quot;ip&quot;:&quot;192.168.3.3&quot;,&quot;ua&quot;:&quot;dfsf&quot;,&quot;userId&quot;:16505193,&quot;appCode&quot;:&quot;101&quot;,&quot;security&quot;:false,&quot;pass&quot;:false,&quot;smsTemplateId&quot;:1}</stringProp>
-            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
-            <hashTree/>
-          </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="ISmsService" enabled="true"/>
-          <hashTree>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="ISmsService-sendMessage (test)" enabled="false">
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_TIMEOUT">6000</stringProp>
-              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
-              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.sms.v2.service.ISmsService</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD">sendMessage</stringProp>
-              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
-              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.sms.v2.contract.req.Message</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;channelId&quot;:4,&quot;channelType&quot;:1,&quot;priority&quot;:2,&quot;templateId&quot;:2,&quot;mobiles&quot;:&quot;13916843740&quot;,&quot;sendTime&quot;:&quot;${__time(yyyy-MM-dd HH:mm:ss,)}&quot;,&quot;content&quot;:&quot;testtesttest&quot;,&quot;subPort&quot;:&quot;0&quot;,&quot;storeId&quot;:0,&quot;platformId&quot;:1,&quot;variableSmsType&quot;:2}</stringProp>
-            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
-            <hashTree/>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="ISmsService-sendBizTemplateMessage （error）" enabled="false">
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_TIMEOUT">6000</stringProp>
-              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
-              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.sms.v2.service.ISmsService</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD">sendBizTemplateMessage</stringProp>
-              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
-              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">2</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">com.lcb.soa.sms.v2.contract.req.SmsSendBizTemplateRequest</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">{&quot;mobiles&quot;:&quot;13916843740&quot;,&quot;priority&quot;:4,&quot;channelId&quot;:3,&quot;platformId&quot;:1,&quot;sendTime&quot;:&quot;${__timeShift(yyyy-MM-dd HH:mm:ss,,P1d,,)}&quot;}</stringProp>
-            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
-            <hashTree/>
-          </hashTree>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="调试" enabled="false">
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&#xd;
-	&quot;name&quot;:&quot;139${__RandomString(8,123,)}&quot;&#xd;
-}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">192.168.3.1</stringProp>
-          <stringProp name="HTTPSampler.port">80</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">top/139${__RandomString(8,123,)}</stringProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree/>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="soa-store" enabled="false"/>
-        <hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IInstitutionService" enabled="true"/>
-          <hashTree>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IInstitutionService-queryStoresByTags" enabled="true">
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
-              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IInstitutionService</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD">queryStoresByTags</stringProp>
-              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
-              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.util.List</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">[&quot;${tags}&quot;]</stringProp>
-            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
-            <hashTree>
-              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="lcbstoreId" enabled="true">
-                <stringProp name="JSONPostProcessor.referenceNames">lcbstoreId</stringProp>
-                <stringProp name="JSONPostProcessor.jsonPathExprs">$[*].id</stringProp>
-                <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
-              </JSONPostProcessor>
-              <hashTree/>
-              <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="打印日志" enabled="true">
-                <stringProp name="filename"></stringProp>
-                <stringProp name="parameters"></stringProp>
-                <boolProp name="resetInterpreter">false</boolProp>
-                <stringProp name="script">log.info(&quot;11111111111111&quot;+&quot;2222zld&quot;)</stringProp>
-              </BeanShellPostProcessor>
-              <hashTree/>
-            </hashTree>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IInstitutionService-queryStoresInSameGroup (error)" enabled="false">
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
-              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IInstitutionService</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD">queryStoresInSameGroup</stringProp>
-              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
-              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">${storeId}</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.util.List</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">[&quot;${tags}&quot;]</stringProp>
-            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
-            <hashTree/>
-          </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IJdShopToreTireService" enabled="false"/>
-          <hashTree>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IJdShopToreTireService-getShopToreTireByLcbStoreId" enabled="true">
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
-              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IJdShopToreTireService</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD">getShopToreTireByLcbStoreId</stringProp>
-              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
-              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Integer</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">${lcbstoreId}</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.util.List</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">[&quot;${tags}&quot;]</stringProp>
-            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
-            <hashTree>
-              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="jdStoreId" enabled="true">
-                <stringProp name="JSONPostProcessor.referenceNames">jdStoreId</stringProp>
-                <stringProp name="JSONPostProcessor.jsonPathExprs">$.jdStoreId</stringProp>
-                <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
-              </JSONPostProcessor>
-              <hashTree/>
-              <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="id" enabled="true">
-                <stringProp name="JSONPostProcessor.referenceNames">id</stringProp>
-                <stringProp name="JSONPostProcessor.jsonPathExprs">$.id</stringProp>
-                <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
-              </JSONPostProcessor>
-              <hashTree/>
-            </hashTree>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IJdShopToreTireService-getShopToreTireById" enabled="true">
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
-              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IJdShopToreTireService</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD">getShopToreTireById</stringProp>
-              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
-              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">${id}</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.util.List</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">[&quot;${tags}&quot;]</stringProp>
-            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
-            <hashTree/>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IJdShopToreTireService-getShopToreTireByJdStoreId" enabled="true">
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
-              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IJdShopToreTireService</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD">getShopToreTireByJdStoreId</stringProp>
-              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
-              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">${jdStoreId}</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.util.List</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">[&quot;${tags}&quot;]</stringProp>
-            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
-            <hashTree/>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IJdShopToreTireService-getShopTireDetailResult" enabled="true">
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
-              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
-              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.store.service.IJdShopToreTireService</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD">getShopTireDetailResult</stringProp>
-              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
-              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">${id}</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.util.List</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">[&quot;${tags}&quot;]</stringProp>
-            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
-            <hashTree/>
-          </hashTree>
-        </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="soa-micro-user" enabled="false"/>
-        <hashTree>
-          <ConfigTestElement guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboDefaultConfigGui" testclass="ConfigTestElement" testname="Dubbo Config" enabled="true">
+          <ConfigTestElement guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboDefaultConfigGui" testclass="ConfigTestElement" testname="soasystem2.lcbtest.cn:9181" enabled="true">
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
@@ -814,9 +891,105 @@
             <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
           </ConfigTestElement>
           <hashTree/>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IFeedbackService" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IFeedbackService" enabled="false"/>
           <hashTree>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IFeedbackService-queryMicroUserByPage" enabled="true">
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IFeedbackService-createFeedback" enabled="true">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IFeedbackService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">createFeedback</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.micro.user.contract.req.CreateFeedbackRequest</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;userId&quot;:5023264,&quot;nickName&quot;:&quot;T.O.P&quot;,&quot;mobile&quot;:&quot;13916843740&quot;,&quot;storeId&quot;:58,&quot;content&quot;:&quot;test&quot;,&quot;feedbackType&quot;:1,&quot;attachmentIds&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]}</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IFeedbackService-getFeedback" enabled="true">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IFeedbackService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">getFeedback</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">100</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IFeedbackService-queryFeedbackList" enabled="true">
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+              <stringProp name="FIELD_DUBBO_CONNECTIONS">100</stringProp>
+              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IFeedbackService</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">queryFeedbackList</stringProp>
+              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.micro.user.contract.req.QueryFeedbackRequest</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;id&quot;:91,&quot;userId&quot;:5023264,&quot;nickName&quot;:&quot;T.O.P&quot;,&quot;mobile&quot;:&quot;13916843740&quot;,&quot;storeId&quot;:58,&quot;content&quot;:&quot;test&quot;,&quot;feedbackType&quot;:1,&quot;startTime&quot;:&quot;2011-10-13 00:00:00&quot;,&quot;endTime&quot;:&quot;2021-10-13 23:59:59&quot;,&quot;pageInfo&quot;:{&quot;rowCount&quot;:0,&quot;currentPage&quot;:1,&quot;pageSize&quot;:20,&quot;pageCount&quot;:0,&quot;totalCount&quot;:0,&quot;orderBy&quot;:&quot;1&quot;}}</stringProp>
+            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="ILoginV2Service" enabled="false"/>
+          <hashTree>
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-partnerLogin" enabled="true">
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
@@ -831,7 +1004,7 @@
               <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
               <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT">50000</stringProp>
               <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_TIMEOUT"></stringProp>
+              <stringProp name="FIELD_DUBBO_TIMEOUT">6000</stringProp>
               <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
               <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
               <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
@@ -839,12 +1012,12 @@
               <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
               <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
               <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.IFeedbackService</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD">createFeedback</stringProp>
+              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.ILoginV2Service</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD">partnerLogin</stringProp>
               <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
               <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.micro.user.contract.req.CreateFeedbackRequest</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;userId&quot;:5023264,&quot;nickName&quot;:&quot;T.O.P&quot;,&quot;mobile&quot;:&quot;13916843740&quot;,&quot;storeId&quot;:58,&quot;content&quot;:&quot;test&quot;,&quot;feedbackType&quot;:1,&quot;attachmentIds&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]}</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.micro.user.contract.req.PartnerLoginRequest</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;appCode&quot;:&quot;108&quot;,&quot;wxAppid&quot;:&quot;wx010a7cac4ffea1a7&quot;,&quot;code&quot;:&quot;041rx3200nYgzM1jPE300qBAzy1rx326&quot;,&quot;encryptedData&quot;:null,&quot;iv&quot;:null,&quot;groupId&quot;:58,&quot;groupType&quot;:2,&quot;token&quot;:&quot;undefined&quot;,&quot;viewCardUserId&quot;:null,&quot;sourceDetails&quot;:null}</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Integer</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">58</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">com.lcb.soa.misc.common.db.PageInfo</stringProp>
@@ -854,7 +1027,7 @@
             </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
             <hashTree/>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IMicroUserV2Service" enabled="false"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IMicroUserV2Service" enabled="true"/>
           <hashTree>
             <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-queryMicroUserByPage" enabled="true">
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
@@ -2522,7 +2695,7 @@
               </JSONPostProcessor>
               <hashTree/>
             </hashTree>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IOauthUserService-unBindOauthUser" enabled="true">
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IOauthUserService-unBindOauthUser" enabled="false">
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
@@ -2635,7 +2808,6 @@
                 <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">58</stringProp>
                 <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
                 <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
-                <stringProp name="TestPlan.comments">通过microUserId解绑当前OpenId    </stringProp>
               </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
               <hashTree/>
             </hashTree>
@@ -3043,101 +3215,6 @@
               </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
               <hashTree/>
             </hashTree>
-          </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="ILoginV2Service" enabled="false"/>
-          <hashTree>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-queryMicroUserByPage" enabled="false">
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT">50000</stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-              <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
-              <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT">50000</stringProp>
-              <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-              <stringProp name="FIELD_DUBBO_TIMEOUT">6000</stringProp>
-              <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-              <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-              <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-              <stringProp name="FIELD_DUBBO_CONNECTIONS">5000</stringProp>
-              <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-              <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-              <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-              <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.ILoginV2Service</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD">partnerLogin</stringProp>
-              <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">3</intProp>
-              <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Integer</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">2</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Integer</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">58</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">com.lcb.soa.misc.common.db.PageInfo</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">{&quot;rowCount&quot;:0,&quot;currentPage&quot;:1,&quot;pageSize&quot;:20,&quot;pageCount&quot;:0,&quot;totalCount&quot;:0,&quot;orderBy&quot;:&quot;1&quot;}</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
-            </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
-            <hashTree/>
-          </hashTree>
-        </hashTree>
-        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="mockjs" enabled="false"/>
-        <hashTree>
-          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-            <boolProp name="LoopController.continue_forever">true</boolProp>
-            <stringProp name="LoopController.loops">1</stringProp>
-          </LoopController>
-          <hashTree>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="mock test" enabled="false">
-              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-                <collectionProp name="Arguments.arguments"/>
-              </elementProp>
-              <stringProp name="HTTPSampler.domain">192.168.3.49</stringProp>
-              <stringProp name="HTTPSampler.port">8081</stringProp>
-              <stringProp name="HTTPSampler.protocol">http</stringProp>
-              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">mock/100004/gateway/user/sendSecurityLoginSms</stringProp>
-              <stringProp name="HTTPSampler.method">POST</stringProp>
-              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-              <stringProp name="HTTPSampler.response_timeout"></stringProp>
-            </HTTPSamplerProxy>
-            <hashTree/>
-            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="mock test" enabled="true">
-              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-                <collectionProp name="Arguments.arguments">
-                  <elementProp name="token" elementType="HTTPArgument">
-                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                    <stringProp name="Argument.value">34343434</stringProp>
-                    <stringProp name="Argument.metadata">=</stringProp>
-                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                    <stringProp name="Argument.name">token</stringProp>
-                  </elementProp>
-                </collectionProp>
-              </elementProp>
-              <stringProp name="HTTPSampler.domain">mock.lechebang.cn</stringProp>
-              <stringProp name="HTTPSampler.port"></stringProp>
-              <stringProp name="HTTPSampler.protocol">https</stringProp>
-              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-              <stringProp name="HTTPSampler.path">mock/6142a13d4012ce28e85aa09e/example_copy/testreq</stringProp>
-              <stringProp name="HTTPSampler.method">POST</stringProp>
-              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-              <stringProp name="HTTPSampler.response_timeout"></stringProp>
-            </HTTPSamplerProxy>
-            <hashTree/>
           </hashTree>
         </hashTree>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
