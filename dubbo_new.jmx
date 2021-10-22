@@ -17,19 +17,19 @@
     <hashTree>
       <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="soa-micro-user" enabled="true"/>
       <hashTree>
-        <ConfigTestElement guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboDefaultConfigGui" testclass="ConfigTestElement" testname="soasystem2.lcbtest.cn:9181" enabled="true">
-          <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL">zookeeper</stringProp>
+        <ConfigTestElement guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboDefaultConfigGui" testclass="ConfigTestElement" testname="soasystem.lcbtest.cn:9181" enabled="true">
+          <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
           <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
           <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
           <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
           <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-          <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS">soasystem2.lcbtest.cn:9181</stringProp>
+          <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
           <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT"></stringProp>
           <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL">zookeeper</stringProp>
           <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
           <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
           <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-          <stringProp name="FIELD_DUBBO_ADDRESS">soasystem2.lcbtest.cn:9181</stringProp>
+          <stringProp name="FIELD_DUBBO_ADDRESS">soasystem.lcbtest.cn:9181</stringProp>
           <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT"></stringProp>
           <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
           <stringProp name="FIELD_DUBBO_TIMEOUT">1000</stringProp>
@@ -223,7 +223,7 @@
             </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
             <hashTree/>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IMicroUserV2Service-partnerLogin" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IMicroUserV2Service-partnerLogin" enabled="false"/>
           <hashTree>
             <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="http-partnerLogin" enabled="false">
               <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -338,10 +338,11 @@
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">{&quot;rowCount&quot;:0,&quot;currentPage&quot;:1,&quot;pageSize&quot;:20,&quot;pageCount&quot;:0,&quot;totalCount&quot;:0,&quot;orderBy&quot;:&quot;1&quot;}</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
+              <stringProp name="TestPlan.comments">小程序用户登录</stringProp>
             </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
             <hashTree/>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IMicroUserV2Service-sendSecurityBindSms" enabled="false"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IMicroUserV2Service-sendSecurityBindSms" enabled="true"/>
           <hashTree>
             <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-sendSecurityBindSms" enabled="true">
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
@@ -453,7 +454,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
             <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.String</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">179ba7e25ceb7d3956958dabcd3a6383</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;appCode&quot;:&quot;108&quot;,&quot;wxAppid&quot;:&quot;wx010a7cac4ffea1a7&quot;,&quot;code&quot;:&quot;051qH70w3W3OgX2YAp3w33KCxD2qH70-&quot;,&quot;encryptedData&quot;:&quot;OxhHPKC3gXPdNqin80VQzCqxH+e/6c2Yoqgf0Uf7tlmqTSVJksByGMhQVWGVYQ1FMcLlmaStuHsPrV5uNrOC8lubXqhQVNeawyv9PbdeNnGlPgrCDPxiJCJMty/C09kxZL3NS+5zbY03pHdEGHwkaYcEkhvQY1SXzAsXEziny/xiDBsW92ZbQqLReuVZrTxsM0srC8iiG6wNRuzIZkB7HQ==&quot;,&quot;iv&quot;:&quot;EomoFyLIjPHvKzFWoepVaA==&quot;,&quot;groupId&quot;:58,&quot;groupType&quot;:2,&quot;token&quot;:&quot;179ba7e25ceb7d3956958dabcd3a6383&quot;,&quot;sourceDetails&quot;:&quot;{\&quot;groupId\&quot;:58,\&quot;groupType\&quot;:2,\&quot;scene\&quot;:1007,\&quot;sendTime\&quot;:1634287968142,\&quot;urlPath\&quot;:\&quot;/pages/index/index\&quot;,\&quot;urlQuery\&quot;:\&quot;inviteUserId=5077559\&quot;,\&quot;urlQueryFormat\&quot;:\&quot;JSON\&quot;}&quot;}</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">58</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">com.lcb.soa.misc.common.db.PageInfo</stringProp>
@@ -498,7 +499,45 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">{&quot;rowCount&quot;:0,&quot;currentPage&quot;:1,&quot;pageSize&quot;:20,&quot;pageCount&quot;:0,&quot;totalCount&quot;:0,&quot;orderBy&quot;:&quot;1&quot;}</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
-            <stringProp name="TestPlan.comments">1.微信滑块验证码 2.抓包获取token信息</stringProp>
+            <stringProp name="TestPlan.comments">1.检验腾讯滑块验证码 2.抓包获取token信息</stringProp>
+          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-bindMobile" enabled="true">
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT">50000</stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
+            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
+            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT">50000</stringProp>
+            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
+            <stringProp name="FIELD_DUBBO_TIMEOUT">6000</stringProp>
+            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
+            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
+            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
+            <stringProp name="FIELD_DUBBO_CONNECTIONS">5000</stringProp>
+            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
+            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
+            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
+            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.ILoginV2Service</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD">bindMobile</stringProp>
+            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
+            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.micro.user.contract.req.MobileBaseUserRequest</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;mobile&quot;:&quot;${mobile}&quot;,&quot;code&quot;:&quot;${new_vcode}&quot;,&quot;clientIp&quot;:&quot;124.77.156.182&quot;,&quot;currentUserId&quot;:33780,&quot;appCode&quot;:&quot;110&quot;,&quot;token&quot;:&quot;${token}&quot;,&quot;groupId&quot;:58,&quot;groupType&quot;:2,&quot;inviteUserId&quot;:5077559,&quot;source&quot;:{&quot;inviteUserId&quot;:5077559},&quot;utmSource &quot;:{&quot;inviteUserId&quot;:5077559,&quot;parentSessionId&quot;:&quot;27af32cb-3abe-4f43-be43-d4d828551982&quot;,&quot;sessionId&quot;:&quot;27af32cb-3abe-4f43-be43-d4d828551982&quot;,&quot;sourceDetails&quot;:&quot;{\&quot;groupId\&quot;:58,\&quot;groupType\&quot;:2,\&quot;scene\&quot;:1007,\&quot;sendTime\&quot;:1634696832976,\&quot;urlPath\&quot;:\&quot;/pages/index/index\&quot;,\&quot;urlQuery\&quot;:\&quot;inviteUserId=5077559\&quot;,\&quot;urlQueryFormat\&quot;:\&quot;JSON\&quot;}&quot;,&quot;urlPath&quot;:&quot;/pages/index/index&quot;,&quot;urlQuery&quot;:&quot;inviteUserId=5077559&quot;,&quot;utmContent&quot;:&quot;2616&quot;,&quot;utmGmtEntry&quot;:1634696832976,&quot;utmServiceType&quot;:0,&quot;utmSource&quot;:&quot;36&quot;}}</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Integer</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">58</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">com.lcb.soa.misc.common.db.PageInfo</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">{&quot;rowCount&quot;:0,&quot;currentPage&quot;:1,&quot;pageSize&quot;:20,&quot;pageCount&quot;:0,&quot;totalCount&quot;:0,&quot;orderBy&quot;:&quot;1&quot;}</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
+            <stringProp name="TestPlan.comments">绑定手机号</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="返回null的所有方法" enabled="false"/>
@@ -542,48 +581,10 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
             <hashTree/>
           </hashTree>
-          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-bindMobile  (fail)" enabled="false">
-            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
-            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
-            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
-            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_USER_NAME"></stringProp>
-            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PASSWORD"></stringProp>
-            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_ADDRESS"></stringProp>
-            <stringProp name="FIELD_DUBBO_CONFIG_CENTER_TIMEOUT">50000</stringProp>
-            <stringProp name="FIELD_DUBBO_REGISTRY_PROTOCOL"></stringProp>
-            <stringProp name="FIELD_DUBBO_REGISTRY_GROUP"></stringProp>
-            <stringProp name="FIELD_DUBBO_REGISTRY_USER_NAME"></stringProp>
-            <stringProp name="FIELD_DUBBO_REGISTRY_PASSWORD"></stringProp>
-            <stringProp name="FIELD_DUBBO_ADDRESS"></stringProp>
-            <stringProp name="FIELD_DUBBO_REGISTRY_TIMEOUT">50000</stringProp>
-            <stringProp name="FIELD_DUBBO_RPC_PROTOCOL">dubbo://</stringProp>
-            <stringProp name="FIELD_DUBBO_TIMEOUT">6000</stringProp>
-            <stringProp name="FIELD_DUBBO_VERSION"></stringProp>
-            <stringProp name="FIELD_DUBBO_RETRIES">0</stringProp>
-            <stringProp name="FIELD_DUBBO_GROUP"></stringProp>
-            <stringProp name="FIELD_DUBBO_CONNECTIONS">5000</stringProp>
-            <stringProp name="FIELD_DUBBO_LOADBALANCE">random</stringProp>
-            <stringProp name="FIELD_DUBBO_ASYNC">sync</stringProp>
-            <stringProp name="FIELD_DUBBO_CLUSTER">failfast</stringProp>
-            <stringProp name="FIELD_DUBBO_INTERFACE">com.lcb.soa.micro.user.service.ILoginV2Service</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD">bindMobile</stringProp>
-            <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
-            <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.micro.user.contract.req.MobileBaseUserRequest</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;mobile&quot;:&quot;13916843740&quot;,&quot;code&quot;:&quot;${new_vcode}&quot;,&quot;clientIp&quot;:&quot;124.77.156.182&quot;,&quot;currentUserId&quot;:null,&quot;appCode&quot;:&quot;110&quot;,&quot;token&quot;:&quot;b80c514ee579d64f3c8540b22490d8f5&quot;,&quot;groupId&quot;:58,&quot;groupType&quot;:2,&quot;inviteUserId&quot;:5077559,&quot;source&quot;:&quot;natural&quot;,&quot;utmSource&quot;:&quot;36&quot;}</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Integer</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">58</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">com.lcb.soa.misc.common.db.PageInfo</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">{&quot;rowCount&quot;:0,&quot;currentPage&quot;:1,&quot;pageSize&quot;:20,&quot;pageCount&quot;:0,&quot;totalCount&quot;:0,&quot;orderBy&quot;:&quot;1&quot;}</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
-            <stringProp name="TestPlan.comments">绑定手机号</stringProp>
-          </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
-          <hashTree/>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IFeedbackService" enabled="false"/>
         <hashTree>
-          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IFeedbackService-createFeedback" enabled="true">
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IFeedbackService-createFeedback" enabled="false">
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
@@ -611,10 +612,11 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
             <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.micro.user.contract.req.CreateFeedbackRequest</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;userId&quot;:5023264,&quot;nickName&quot;:&quot;T.O.P&quot;,&quot;mobile&quot;:&quot;13916843740&quot;,&quot;storeId&quot;:58,&quot;content&quot;:&quot;test&quot;,&quot;feedbackType&quot;:1,&quot;attachmentIds&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]}</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;userId&quot;:33780,&quot;nickName&quot;:&quot;T.O.P&quot;,&quot;mobile&quot;:&quot;13916843740&quot;,&quot;storeId&quot;:58,&quot;content&quot;:&quot;test&quot;,&quot;feedbackType&quot;:1,&quot;attachmentIds&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]}</stringProp>
+            <stringProp name="TestPlan.comments">创建小程序意见反馈</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
-          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IFeedbackService-getFeedback" enabled="true">
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IFeedbackService-getFeedback" enabled="false">
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
@@ -642,7 +644,8 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
             <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">100</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">119</stringProp>
+            <stringProp name="TestPlan.comments">根据主键id获取数据</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IFeedbackService-queryFeedbackList" enabled="true">
@@ -673,7 +676,8 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
             <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.micro.user.contract.req.QueryFeedbackRequest</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;id&quot;:91,&quot;userId&quot;:5023264,&quot;nickName&quot;:&quot;T.O.P&quot;,&quot;mobile&quot;:&quot;13916843740&quot;,&quot;storeId&quot;:58,&quot;content&quot;:&quot;test&quot;,&quot;feedbackType&quot;:1,&quot;startTime&quot;:&quot;2011-10-13 00:00:00&quot;,&quot;endTime&quot;:&quot;2021-10-13 23:59:59&quot;,&quot;pageInfo&quot;:{&quot;rowCount&quot;:0,&quot;currentPage&quot;:1,&quot;pageSize&quot;:20,&quot;pageCount&quot;:0,&quot;totalCount&quot;:0,&quot;orderBy&quot;:&quot;1&quot;}}</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;id&quot;:119,&quot;userId&quot;:33789,&quot;nickName&quot;:&quot;T.O.P&quot;,&quot;mobile&quot;:&quot;13916843740&quot;,&quot;storeId&quot;:58,&quot;content&quot;:&quot;test&quot;,&quot;feedbackType&quot;:1,&quot;startTime&quot;:&quot;2011-10-13 00:00:00&quot;,&quot;endTime&quot;:&quot;2021-10-13 23:59:59&quot;,&quot;pageInfo&quot;:{&quot;rowCount&quot;:0,&quot;currentPage&quot;:1,&quot;pageSize&quot;:20,&quot;pageCount&quot;:0,&quot;totalCount&quot;:0,&quot;orderBy&quot;:&quot;1&quot;}}</stringProp>
+            <stringProp name="TestPlan.comments">查看admin后台4s店小程序意见反馈</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
         </hashTree>
@@ -714,7 +718,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">{&quot;rowCount&quot;:0,&quot;currentPage&quot;:1,&quot;pageSize&quot;:20,&quot;pageCount&quot;:0,&quot;totalCount&quot;:0,&quot;orderBy&quot;:&quot;1&quot;}</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
-            <stringProp name="TestPlan.comments">com.lcb.soa.micro.user.service.IMicroUserV2Service  queryMicroUserByPage</stringProp>
+            <stringProp name="TestPlan.comments">1.分页查询</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-getRegisterUserCount" enabled="true">
@@ -754,6 +758,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">1.获取时间内的注册用户数量</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-queryMicroUserByLcbUserId" enabled="true">
@@ -791,6 +796,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
+            <stringProp name="TestPlan.comments">根据乐车邦id查是否魔轮用户（不区分店铺）</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-createMicroUserBatchOfFsData" enabled="true">
@@ -828,6 +834,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
+            <stringProp name="TestPlan.comments">批量创建用户</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-generateMicroUserOfFsData" enabled="true">
@@ -865,6 +872,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
+            <stringProp name="TestPlan.comments">风神用户同步</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-isCheckPrivacy" enabled="true">
@@ -902,6 +910,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
+            <stringProp name="TestPlan.comments">用户是否有授权</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-queryMicroUserByNickName" enabled="true">
@@ -939,7 +948,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">T.O.P</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
-            <stringProp name="TestPlan.comments">问题</stringProp>
+            <stringProp name="TestPlan.comments">询指定店铺下的用户 根据nickname</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-queryLcbUserSimpleInfoByMicroUserIds" enabled="true">
@@ -977,7 +986,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">58</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
-            <stringProp name="TestPlan.comments">问题</stringProp>
+            <stringProp name="TestPlan.comments">根据microUserId，批量获取lcbUserId及realName</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
@@ -1017,7 +1026,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">58</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
-            <stringProp name="TestPlan.comments">问题</stringProp>
+            <stringProp name="TestPlan.comments">根据手机号，批量获取lcbUserId及realName</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
@@ -1057,7 +1066,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">58</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
-            <stringProp name="TestPlan.comments">问题</stringProp>
+            <stringProp name="TestPlan.comments">新增microUser</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
@@ -1128,7 +1137,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">58</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
-            <stringProp name="TestPlan.comments">问题</stringProp>
+            <stringProp name="TestPlan.comments">根据手机号获取lcbUser(如果不存在lcbUser，将抛出异常)</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
@@ -1175,7 +1184,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">58</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
-            <stringProp name="TestPlan.comments">问题</stringProp>
+            <stringProp name="TestPlan.comments">1.根据microUserId获取lcb user(如果不存在lcbUser，将抛出异常)2.获取逻辑：根据microUserId，获取手机号，然后根据手机号在lcbUser中查询</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
@@ -1303,6 +1312,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">获取手机号对应的所有小程序用户</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-getMicroUserSourceByMicroUserId" enabled="true">
@@ -1342,6 +1352,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">获取小程序用户来源</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-generateMicroUser" enabled="true">
@@ -1381,6 +1392,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">crm静默注册用户，按照配置开放，目前仅对58,581[苏州银狮汽车销售服务有限公司]开放</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-generateBizMicroUser" enabled="true">
@@ -1420,6 +1432,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">添加microUser &lt;&gt;手机号先判断是是否静默注册lcbUser&lt;/&gt;</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-getMicroUsersOfGroup" enabled="true">
@@ -1459,6 +1472,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">批量获取门店下microUser</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-generateAdminMicroUser" enabled="true">
@@ -1492,12 +1506,13 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">200</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Long</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">10403392</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">java.lang.Integer</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">d</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3">58</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">通过userId生产MicroUser(biz/admin端用户生成</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-generateAdminMicroUser2" enabled="true">
@@ -1615,6 +1630,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">重置指定id的手机号为null，绑定状态为0</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-getStoreMicroUser (特殊参数)" enabled="true">
@@ -1654,6 +1670,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">获取店铺下用户列表</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-getMicroUserById" enabled="true">
@@ -1684,7 +1701,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
             <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023264</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">33780</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">58</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">java.lang.Integer</stringProp>
@@ -1732,6 +1749,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">通过手机号获取指定店铺下的microUser</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-queryMicroUserIdByMobile (特殊参数)" enabled="true">
@@ -1771,6 +1789,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">按手机号批量获取指定店铺的microUser用户</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-getMicroUserOfOneUser" enabled="true">
@@ -1810,6 +1829,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">获取特定lcb用户的microUser</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-getMicroUserByUidAndGid" enabled="true">
@@ -1849,6 +1869,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">通过lcbUserId和gid获取MicroUser</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-currentUser" enabled="true">
@@ -1879,7 +1900,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
             <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023264</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">33780</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">58</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">java.lang.Integer</stringProp>
@@ -1888,6 +1909,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">通过microUserId获取当前用户</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree>
             <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="provider" enabled="true">
@@ -1934,6 +1956,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">通过microUserId获取当前用户</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-findUserByIds" enabled="true">
@@ -1964,7 +1987,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
             <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.util.List</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">[5023264,148]</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">[33780,148]</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">58</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">java.lang.Integer</stringProp>
@@ -1973,6 +1996,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+            <stringProp name="TestPlan.comments">通过Ids获取用户详情</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="返回null的所有方法" enabled="false"/>
@@ -2081,13 +2105,14 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
               <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">1</intProp>
               <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">com.lcb.soa.micro.user.contract.req.SaveUserPrivacyReq</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;groupType&quot;:2,&quot;groupId&quot;:58,&quot;microUserId&quot;:5023264,&quot;check&quot;:true}</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">{&quot;groupType&quot;:2,&quot;groupId&quot;:58,&quot;microUserId&quot;:33780,&quot;check&quot;:true}</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Integer</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">58</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">PageInfo</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE3"></stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
+              <stringProp name="TestPlan.comments">保存用户隐私选项：只有在选择时才调用</stringProp>
             </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
             <hashTree/>
             <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-updateRealName" enabled="false">
@@ -2118,7 +2143,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
               <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
               <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">long</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023264</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">33780</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.String</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">top123456</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE3">java.lang.Integer</stringProp>
@@ -2167,6 +2192,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+              <stringProp name="TestPlan.comments">通过token获取用户信息</stringProp>
             </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
             <hashTree/>
             <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IMicroUserV2Service-getCurrentMicroUserByToken （无token）" enabled="false">
@@ -2206,6 +2232,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE5"></stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE5"></stringProp>
+              <stringProp name="TestPlan.comments">通过token获取当前microUser</stringProp>
             </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
             <hashTree/>
           </hashTree>
@@ -2501,7 +2528,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
             <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023264</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">33780</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">10201</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
@@ -2535,12 +2562,12 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
             <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
-            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023264</stringProp>
+            <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">33780</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">java.lang.Long</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">863</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
-          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-getContactAddressByUserIdAndId" enabled="true">
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-getContactAddressDtoByMapType" enabled="true">
             <stringProp name="TestPlan.comments"> 1.根据用户ID和地址ID以及地图类型查询地址详情 2.uc_contact_address表中的id</stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
@@ -2578,7 +2605,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
           <hashTree/>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="返回null的所有方法" enabled="true"/>
           <hashTree>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-deleteContactAddress" enabled="true">
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-deleteContactAddress" enabled="false">
               <stringProp name="TestPlan.comments"> 1.批量删除 2.uc_contact_address表中的user_id</stringProp>
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
@@ -2616,7 +2643,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
         </hashTree>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="IOauthUserService" enabled="false"/>
         <hashTree>
-          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IOauthUserService-getOauthUserBetweenTimes" enabled="true">
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IOauthUserService-getOauthUserBetweenTimes" enabled="false">
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
@@ -2654,7 +2681,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="TestPlan.comments">获取时间内的注册用户数量</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
-          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IOauthUserService-getOauthUserRandom" enabled="true">
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IOauthUserService-getOauthUserRandom" enabled="false">
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
@@ -2692,7 +2719,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="TestPlan.comments">随机获取指定数量的授权用户</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
-          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IOauthUserService-getOauthUserByUserIdAndProvider" enabled="true">
+          <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IOauthUserService-getOauthUserByUserIdAndProvider" enabled="false">
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
             <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
@@ -2825,7 +2852,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="TestPlan.comments">通过microUserId解绑当前OpenId    </stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
           <hashTree/>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="返回null的所有方法" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="返回null的所有方法" enabled="false"/>
           <hashTree>
             <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IOauthUserService-getOauthUser" enabled="true">
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
@@ -3003,7 +3030,7 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
           <hashTree/>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="返回null的所有方法" enabled="true"/>
           <hashTree>
-            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-checkVerifySuccess" enabled="false">
+            <io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample guiclass="io.github.ningyu.jmeter.plugin.dubbo.gui.DubboSampleGui" testclass="io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample" testname="IUserCenterService-checkVerifySuccess" enabled="true">
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_PROTOCOL"></stringProp>
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_GROUP"></stringProp>
               <stringProp name="FIELD_DUBBO_CONFIG_CENTER_NAMESPACE"></stringProp>
@@ -3031,67 +3058,12 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
               <intProp name="FIELD_DUBBO_METHOD_ARGS_SIZE">2</intProp>
               <intProp name="FIELD_DUBBO_ATTACHMENT_ARGS_SIZE">0</intProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE1">java.lang.Long</stringProp>
-              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">5023264</stringProp>
+              <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE1">33780</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE2">com.lcb.soa.micro.user.contract.req.CarVinRequest</stringProp>
               <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE2">{&quot;carNumber&quot;:&quot;粤BN99S0&quot;,&quot;clientIp&quot;:&quot;192.168.11.203&quot;,&quot;ticket&quot;:&quot;t02Ds4-f0v9rlrWr-9Ltc1X8q4fIN73YvqswpoNd_WhlhEPePsF8ZDAeutYJQuL_D3yCO67yUKT_ccRA6zhjU4UDjZE4KP5pB3CA33bMw7hPupmISri1Lkang**&quot;,&quot;randStr&quot;:&quot;@fw8&quot;,&quot;category&quot;:1,&quot;providerCode&quot;:&quot;TenCentHK&quot;}</stringProp>
             </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
             <hashTree/>
           </hashTree>
-        </hashTree>
-      </hashTree>
-      <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="mockjs" enabled="false"/>
-      <hashTree>
-        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">true</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
-        </LoopController>
-        <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="mock test" enabled="false">
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments"/>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain">192.168.3.49</stringProp>
-            <stringProp name="HTTPSampler.port">8081</stringProp>
-            <stringProp name="HTTPSampler.protocol">http</stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">mock/100004/gateway/user/sendSecurityLoginSms</stringProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="mock test" enabled="true">
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
-              <collectionProp name="Arguments.arguments">
-                <elementProp name="token" elementType="HTTPArgument">
-                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                  <stringProp name="Argument.value">34343434</stringProp>
-                  <stringProp name="Argument.metadata">=</stringProp>
-                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
-                  <stringProp name="Argument.name">token</stringProp>
-                </elementProp>
-              </collectionProp>
-            </elementProp>
-            <stringProp name="HTTPSampler.domain">mock.lechebang.cn</stringProp>
-            <stringProp name="HTTPSampler.port"></stringProp>
-            <stringProp name="HTTPSampler.protocol">https</stringProp>
-            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-            <stringProp name="HTTPSampler.path">mock/6142a13d4012ce28e85aa09e/example_copy/testreq</stringProp>
-            <stringProp name="HTTPSampler.method">POST</stringProp>
-            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-            <stringProp name="HTTPSampler.response_timeout"></stringProp>
-          </HTTPSamplerProxy>
-          <hashTree/>
         </hashTree>
       </hashTree>
       <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="soa-sms" enabled="false"/>
@@ -3874,6 +3846,61 @@ vars.putObject(&quot;new_vcode&quot;,new_vcode);</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_TYPE4">java.lang.Integer</stringProp>
             <stringProp name="FIELD_DUBBO_METHOD_ARGS_PARAM_VALUE4">2</stringProp>
           </io.github.ningyu.jmeter.plugin.dubbo.sample.DubboSample>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="mockjs" enabled="false"/>
+      <hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </LoopController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="mock test" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">192.168.3.49</stringProp>
+            <stringProp name="HTTPSampler.port">8081</stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">mock/100004/gateway/user/sendSecurityLoginSms</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="mock test" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="token" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">34343434</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">token</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">mock.lechebang.cn</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">mock/6142a13d4012ce28e85aa09e/example_copy/testreq</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
           <hashTree/>
         </hashTree>
       </hashTree>
